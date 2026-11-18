@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.85;
+    font-size: 1.1rem;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.card h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+button {
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 25px 0;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.25);
+}
+
+#displayMessage {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 500;
+    min-height: 30px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+    opacity: 0.75;
+    font-size: 14px;
+}
