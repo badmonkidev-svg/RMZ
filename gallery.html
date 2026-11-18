@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        if (localStorage.getItem('rmzFamilyAuth') !== 'granted') {
+            window.location.href = 'login.html';
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Memories — RMZ Family</title>
@@ -229,9 +234,9 @@
             <!-- 📸 Memory 3 -->
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <div class="timeline-year">🎂 Papa's Birthday</div>
-                    <img src="images/papas-birthday.jpg" alt="Papa's Birthday">
-                    <p class="timeline-text">Our strong, kind Papa — the one who guides us, protects us, and loves us endlessly. Happy birthday to our rock. We're so proud to be your family.</p>
+                    <div class="timeline-year">⚓ Papa — Seaman Chief Cook</div>
+                    <img src="images/papas-birthday.jpg" alt="Papa — Seaman Chief Cook">
+                    <p class="timeline-text">Our strong, hardworking Papa. Working as a Seaman Chief Cook — dedicated, skilled, and always providing for us. Even when far at sea, his love is always here with us. We are so proud of you, Papa. Stay safe always. ❤️</p>
                 </div>
             </div>
 
