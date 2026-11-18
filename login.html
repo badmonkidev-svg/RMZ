@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome — RMZ Family</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #5d7a96 0%, #8fb4b4 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            text-align: center;
+            width: 90%;
+            max-width: 420px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .lock-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #4a6b6b;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #5d7a96;
+        }
+
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #5d7a96 0%, #8fb4b4 100%);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            color: #d9534f;
+            margin-top: 15px;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="lock-icon">🔒</div>
+        <h2>Welcome Home</h2>
+        <p>Enter the family name to access our memories ❤️</p>
+        
+        <input type="text" id="familyNameInput" placeholder="Enter full family name..." autocomplete="off">
+        <button onclick="checkAccess()">Enter Our Home</button>
+        
+        <div class="error-message" id="errorMsg">❌ That doesn't match — please try again</div>
+    </div>
+
+    <script>
+        // 🔑 YOUR FAMILY NAME — change this if needed!
+        const CORRECT_FAMILY_NAME = "Ramirez Family";
+
+        function checkAccess() {
+            const input = document.getElementById('familyNameInput').value.trim();
+            const errorMsg = document.getElementById('errorMsg');
+            
+            if (input.toLowerCase() === CORRECT_FAMILY_NAME.toLowerCase()) {
+                localStorage.setItem('rmzFamilyAuth', 'granted');
+                window.location.href = 'index.html';
+            } else {
+                errorMsg.style.display = 'block';
+                document.getElementById('familyNameInput').value = '';
+                setTimeout(() => errorMsg.style.display = 'none', 3000);
+            }
+        }
+
+        document.getElementById('familyNameInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') checkAccess();
+        });
+    </script>
+</body>
+</html>
