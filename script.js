@@ -4,12 +4,12 @@ let isActive = false;
 
 actionBtn.addEventListener('click', function() {
     if (!isActive) {
-        displayMessage.textContent = "🌟 Let's create something amazing!";
+        displayMessage.textContent = "❤️ Welcome to our family website — so glad you're here!";
         isActive = true;
-        actionBtn.textContent = "✨ Keep Going!";
+        actionBtn.textContent = "💙 Thank You";
     } else {
-        displayMessage.textContent = "💪 Every step counts — you've got this!";
+        displayMessage.textContent = "Family — where life begins and love never ends.";
     }
 });
 
-console.log("RMZ site is live! 🚀");
+console.log("RAMIREZ FAM website ❤️");

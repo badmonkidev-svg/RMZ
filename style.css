@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    background: linear-gradient(135deg, #5d7a96 0%, #8fb4b4 100%);
     min-height: 100vh;
     color: #333;
     line-height: 1.6;
@@ -14,7 +14,7 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     padding: 20px 40px;
     display: flex;
@@ -26,17 +26,17 @@ body {
 }
 
 .nav-logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: white;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 30px;
-    opacity: 0.85;
+    margin-left: 25px;
+    opacity: 0.9;
     transition: all 0.3s ease;
 }
 
@@ -44,6 +44,7 @@ body {
 .nav-links a.active {
     opacity: 1;
     border-bottom: 2px solid white;
+    padding-bottom: 3px;
 }
 
 /* Main Container */
@@ -61,92 +62,93 @@ header {
 }
 
 header h1 {
-    font-size: 3.5rem;
-    letter-spacing: 5px;
+    font-size: 2.8rem;
     margin-bottom: 10px;
 }
 
 header p {
-    opacity: 0.85;
+    opacity: 0.9;
     font-size: 1.1rem;
+    font-style: italic;
 }
 
 /* Cards */
 .card {
     background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 45px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     text-align: center;
     animation: fadeIn 0.6s ease-out;
 }
 
 .card h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
+    color: #4a6b6b;
+    margin-bottom: 20px;
     font-size: 1.6rem;
 }
 
 .card p {
     color: #555;
     font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Button */
-button, .contact-btn {
-    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+button {
+    background: linear-gradient(135deg, #5d7a96 0%, #8fb4b4 100%);
     color: white;
     border: none;
-    padding: 15px 35px;
+    padding: 14px 35px;
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
     margin-top: 25px;
     transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
 }
 
-button:hover, .contact-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.25);
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(93, 122, 150, 0.3);
 }
 
 #displayMessage {
     margin-top: 20px;
-    font-size: 18px;
-    color: #2c3e50;
+    font-size: 17px;
+    color: #4a6b6b;
     font-weight: 500;
     min-height: 30px;
 }
 
-/* Projects Grid */
-.projects-grid {
+/* Gallery Grid */
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 20px;
 }
 
-.project-card {
+.gallery-card {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 35px 25px;
+    border-radius: 12px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    text-align: center;
 }
 
-.project-card:hover {
+.gallery-card:hover {
     transform: translateY(-5px);
 }
 
-.project-card h3 {
-    color: #2c3e50;
+.gallery-card h3 {
+    color: #4a6b6b;
     margin-bottom: 10px;
 }
 
-.project-card p {
-    color: #666;
+.gallery-card p {
+    color: #777;
     font-size: 0.95rem;
 }
 
@@ -155,7 +157,7 @@ footer {
     text-align: center;
     color: white;
     padding: 30px;
-    opacity: 0.75;
+    opacity: 0.85;
     font-size: 14px;
     margin-top: 40px;
 }
@@ -186,10 +188,10 @@ footer {
     }
 
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .card {
-        padding: 25px;
+        padding: 30px 20px;
     }
 }
